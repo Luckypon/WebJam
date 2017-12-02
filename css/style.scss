@@ -1,0 +1,34 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$positionX: 0;
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+.container{
+	width:1280px;   
+	margin:auto;
+	position: relative;
+	min-height:2rem;
+}
+
+.calque{
+	width:10rem;
+	height:10rem;
+	position: absolute;
+
+	img{
+		max-width:100%;
+		height:auto;
+	}
+	
+}
+
+@for $i from 1 through 4{
+	.calque:nth-child(#{$i+1}) {
+		top : $i * 4rem;
+		left : $i * 4rem;
+	}
+}

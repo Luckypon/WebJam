@@ -1,0 +1,35 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; }
+
+.container {
+  width: 1280px;
+  margin: auto;
+  position: relative;
+  min-height: 2rem; }
+
+.calque {
+  width: 10rem;
+  height: 10rem;
+  position: absolute; }
+  .calque img {
+    max-width: 100%;
+    height: auto; }
+
+.calque:nth-child(2) {
+  top: 4rem;
+  left: 4rem; }
+
+.calque:nth-child(3) {
+  top: 8rem;
+  left: 8rem; }
+
+.calque:nth-child(4) {
+  top: 12rem;
+  left: 12rem; }
+
+.calque:nth-child(5) {
+  top: 16rem;
+  left: 16rem; }
+
+/*# sourceMappingURL=style.css.map */

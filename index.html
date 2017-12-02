@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>WebJam</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -20,26 +20,50 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
   <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-      </div>
+    <div class="question" data-value="totem">
+      <button data-value="A">Totem Amerindien</button>
+      <button data-value="P">Totem Polynésien</button>
+    </div>
+    
+    <div class="question" data-value="vegetation">
+      <button data-value="A">Vegetation Amerindien</button>
+      <button data-value="P">Vegetation Polynésien</button>
     </div>
   </div>
+  
+
+
+  <div class="container">
+
+    <div id="totem" class="calque">
+      <img src="img/noImage.jpg" alt="totem">
+    </div>
+
+    <div id="vegetation" class="calque">
+      <img src="img/noImage.jpg" alt="vegetation">
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
+
+
+
 </html>
