@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	$(function (){
+	function reset(){
 		$(".question").hide();
 		$(".question:nth-child(1)").show();
 		$(".calque").hide();
-	});
+	};
 
 
 	$('.question > button').click(function(e){
@@ -23,6 +23,20 @@ $(document).ready(function() {
 		parent.next('.question').show();
 
 	});
+
+	$('#reset').click(function(e){
+		reset();
+	});
+
+	$('#infos-btn').click(function(e){
+		$("#infos").show();
+	});
+
+	$('#infos > .close').click(function(e){
+		$("#infos").hide();
+	});
+
+	reset();
 
 });
 
