@@ -1,12 +1,22 @@
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333; }
+  color: #333;
+  height: 100%;
+  width: 100%; }
 
-.container {
-  width: 1280px;
+section {
+  width: 100%;
   margin: auto;
-  position: relative;
-  min-height: 2rem; }
+  position: absolute;
+  padding: 2% 5% 0% 5%;
+  box-sizing: border-box; }
+  section#canvas {
+    background: blue;
+    height: 80%; }
+  section#questions {
+    bottom: 0;
+    background: red;
+    height: 20%; }
 
 .calque {
   width: 10rem;

@@ -5,13 +5,28 @@ $positionX: 0;
 body {
 	font: 100% $font-stack;
 	color: $primary-color;
+	height:100%;
+	width:100%;
 }
 
-.container{
-	width:1280px;   
+section{
+	width:100%;
 	margin:auto;
-	position: relative;
-	min-height:2rem;
+	position: absolute;
+	padding:2% 5% 0% 5%;
+	box-sizing:border-box;
+	
+
+	&#canvas{
+		background: blue;
+		height:80%;
+	}
+
+	&#questions{
+		bottom:0;
+		background: red; 
+		height:20%;
+	}
 }
 
 .calque{
