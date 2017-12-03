@@ -86,35 +86,67 @@ button, #reset{
 	}
 
 
-	#vegetation{
-		width:800px;
-		transform:translate(-50%,-50%);
+	#vegetationA{
+		width: 830px;
+		transform: translate(-56%, -39%);
+	}
+	#vegetationP{
+		width: 822px;
+		transform: translate(-55%, -37%);
 	}
 
-	#animal1{
-		width:400px;
-		transform:translate(-60%,-50%);
+	#animal1A{
+		width: 214px;
+		transform: translate(-98%, -1%);
+	}
+	#animal1P{
+		width: 214px;
+		transform: translate(-97%, 1%);
 	}
 
-	#motif{
-		width:400px;
-		transform:translate(-60%,-50%);
+	#motifA{
+		width: 659px;
+		transform: translate(-63%, -43%);
 	}
-	#animal2{
-		width:400px;
-		transform:translate(-70%,-50%);
+	#motifP{
+		width: 548px;
+		transform: translate(-58%, -43%);
 	}
-	#fruit{
-		width:400px;
-		transform:translate(-80%,-50%);
+
+	#animal2A{
+		width: 348px;
+		transform: translate(-16%, 44%);
 	}
-	#couronne{
-		width:400px;
-		transform:translate(-60%,-70%);
+	#animal2P{ 
+		width: 333px;
+		transform: translate(-24%, 45%);
 	}
-	#totem{
-		width:400px;
-		transform:translate(-60%,-60%);
+
+	#fruitA{
+		width: 121px;
+		transform: translate(-214%, 121%);
+	}
+	#fruitP{
+		width: 118px;
+		transform: translate(-208%, 125%);
+	}
+
+	#couronneA{
+		width: 276px;
+		transform: translate(-50%, -97%);
+	}
+	#couronneP{
+		width: 282px;
+		transform: translate(-50%, -94%);
+	}
+
+	#totemA{
+		width: 277px;
+		transform: translate(-50%, -39%);
+	}
+	#totemP{
+		width: 276px;
+		transform: translate(-50%, -27%);
 	}
 }
 

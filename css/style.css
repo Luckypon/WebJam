@@ -61,27 +61,48 @@ button, #reset {
     #position .calque img {
       max-width: 100%;
       height: auto; }
-  #position #vegetation {
-    width: 800px;
-    transform: translate(-50%, -50%); }
-  #position #animal1 {
-    width: 400px;
-    transform: translate(-60%, -50%); }
-  #position #motif {
-    width: 400px;
-    transform: translate(-60%, -50%); }
-  #position #animal2 {
-    width: 400px;
-    transform: translate(-70%, -50%); }
-  #position #fruit {
-    width: 400px;
-    transform: translate(-80%, -50%); }
-  #position #couronne {
-    width: 400px;
-    transform: translate(-60%, -70%); }
-  #position #totem {
-    width: 400px;
-    transform: translate(-60%, -60%); }
+  #position #vegetationA {
+    width: 830px;
+    transform: translate(-56%, -39%); }
+  #position #vegetationP {
+    width: 822px;
+    transform: translate(-55%, -37%); }
+  #position #animal1A {
+    width: 214px;
+    transform: translate(-98%, -1%); }
+  #position #animal1P {
+    width: 214px;
+    transform: translate(-97%, 1%); }
+  #position #motifA {
+    width: 659px;
+    transform: translate(-63%, -43%); }
+  #position #motifP {
+    width: 548px;
+    transform: translate(-58%, -43%); }
+  #position #animal2A {
+    width: 348px;
+    transform: translate(-16%, 44%); }
+  #position #animal2P {
+    width: 333px;
+    transform: translate(-24%, 45%); }
+  #position #fruitA {
+    width: 121px;
+    transform: translate(-214%, 121%); }
+  #position #fruitP {
+    width: 118px;
+    transform: translate(-208%, 125%); }
+  #position #couronneA {
+    width: 276px;
+    transform: translate(-50%, -97%); }
+  #position #couronneP {
+    width: 282px;
+    transform: translate(-50%, -94%); }
+  #position #totemA {
+    width: 277px;
+    transform: translate(-50%, -39%); }
+  #position #totemP {
+    width: 276px;
+    transform: translate(-50%, -27%); }
 
 #reset {
   position: absolute;
