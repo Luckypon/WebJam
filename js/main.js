@@ -48,6 +48,7 @@ function reset(){
 	requestAjax("start", "#intro");
 	$("#questions").empty();
 	$(".calque").hide();
+	$("#canvas").css("background", "url() repeat");
 	/*$(".calque > img").attr("src", "");*/
 }
 
