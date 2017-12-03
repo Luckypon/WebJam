@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	window.setTimeout(function() {
+		$("#loader").hide();
+	}, 1000);
+
 	requestAjax("start", "#intro");
 	reset();
 

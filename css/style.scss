@@ -19,6 +19,18 @@ section{
 	position: absolute;
 	box-sizing:border-box;
 
+	&#loader{
+		background: #fff;
+		z-index: 5;
+		height: 100%;
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	&#start{
 		position: fixed;
 		overflow: hidden;
@@ -67,7 +79,7 @@ section{
 			animation-name: intro;
 			animation-duration: 6s;
 			animation-timing-function: ease-in;
-			animation-delay: 2s;
+			animation-delay: 3s;
 			animation-iteration-count: 1;
 			animation-fill-mode: forwards;
 		}
@@ -87,7 +99,7 @@ section{
 			animation-name: intro;
 			animation-duration: 6s;
 			animation-timing-function: ease-in;
-			animation-delay: 4s;
+			animation-delay: 5s;
 			animation-iteration-count: 1;
 			animation-fill-mode: forwards;
 
