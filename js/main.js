@@ -53,6 +53,7 @@ function reset(){
 /******** Reset the canvas ********/
 
 function showImage() {
+
 	var parent = $(this).parent();
 	var data1 = parent.data("value");
 	var data2 = $(this).data("value");
@@ -61,10 +62,16 @@ function showImage() {
 	var img = $("#"+data1+" > img");
 	var imageURL = "img/"+data1+data2+".png";
 
-	img.attr("src", imageURL);
-	element.show();
-
 	var number = parent.data("number");
+
+	if (number == 1) {
+		$("#canvas").css("background", "url("+imageURL+") repeat");
+	}
+	else{
+		img.attr("src", imageURL);
+		element.show();
+	}
+
 	nextQuestion(number);
 }
 
