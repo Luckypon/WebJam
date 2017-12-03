@@ -105,7 +105,9 @@ section {
   section#canvas {
     height: 80%;
     background-color: #F2F2EB;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease; }
   section#questions {
     bottom: 0;
     height: 20%;
@@ -136,11 +138,13 @@ section {
 
 #resetBtn {
   position: absolute;
-  left: 5%; }
+  left: 5%;
+  margin-top: 0; }
 
 #saveBtn {
   position: absolute;
-  right: 5%; }
+  right: 5%;
+  margin-top: 0; }
 
 #questions button {
   text-decoration: none;

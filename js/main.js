@@ -86,16 +86,14 @@ function showImage() {
 		element.addClass('move');
 	}
 
-
-
 	nextQuestion(number);
 }
 
 function nextQuestion(number){
 	if (number == 8) {
-		requestAjax("reset", "#reset");
-		$("#questions").hide();
-		$("#canvas").css("height", "100%");
+			requestAjax("reset", "#reset");
+			$("#questions").hide();
+			$("#canvas").css("height", "100%");
 	}
 	else{
 		requestAjax("question"+(number+1), "#questions");

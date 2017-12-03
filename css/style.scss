@@ -137,6 +137,8 @@ section{
 		height:80%;
 		background-color: $background-canvas;
 		overflow:hidden;
+		-webkit-transition:1s all ease;
+		transition:1s all ease;
 	}
 
 	&#questions{
@@ -179,10 +181,13 @@ section{
 #resetBtn{
 	position: absolute;
 	left: 5%;
+	margin-top: 0;
 }
 #saveBtn{
 	position: absolute;
 	right: 5%;
+	margin-top: 0;
+
 }
 #questions button{
 
