@@ -69,7 +69,7 @@ function showImage() {
 }
 
 function nextQuestion(number){
-	if (number == 2) {
+	if (number == 7) {
 		requestAjax("reset", "#questions");
 	}
 	else{
