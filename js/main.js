@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	window.setTimeout(function() {
 		$("#loader").hide();
-	}, 1000);
+	}, 3000);
 
 	requestAjax("start", "#intro");
 	reset();

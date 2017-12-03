@@ -320,13 +320,18 @@ button, #reset, #save {
     background-color: #F2F2EB;
     color: #363B5D;
     text-align: center;
-    padding: 2%;
-    width: 50%;
-    height: 50%;
+    padding: 0 2%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* contexte sur le parent */
+    flex-direction: column;
+    /* direction d'affichage verticale */
+    justify-content: center; }
 
 #infos-btn {
   color: black;
@@ -349,6 +354,229 @@ button, #reset, #save {
     margin: 0;
     line-height: 50px; }
 
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*:before, *:after {
+  content: ""; }
+
+html, body {
+  height: 100%; }
+
+.loaderCool {
+  width: 12em;
+  height: 1.5em; }
+
+.loaderCool, .loaderCool *, .loaderCool *:before, .loaderCool *:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.thing:before, .thing:after {
+  right: auto;
+  width: 1.5em;
+  height: 0.09375em;
+  background: #f06060;
+  -webkit-transform-origin: right bottom 0;
+  transform-origin: right bottom 0; }
+
+.thing:nth-child(1):before, .thing:nth-child(1):after {
+  left: 0em; }
+
+.thing:nth-child(1):before {
+  -webkit-animation: thing 1s -0s linear infinite alternate;
+  animation: thing 1s -0s linear infinite alternate; }
+
+.thing:nth-child(1):after {
+  -webkit-animation: thing 1s -0s linear infinite alternate-reverse;
+  animation: thing 1s -0s linear infinite alternate-reverse; }
+
+.thing:nth-child(2):before, .thing:nth-child(2):after {
+  left: 0.75em; }
+
+.thing:nth-child(2):before {
+  -webkit-animation: thing 1s -0.0625s linear infinite alternate;
+  animation: thing 1s -0.0625s linear infinite alternate; }
+
+.thing:nth-child(2):after {
+  -webkit-animation: thing 1s -0.0625s linear infinite alternate-reverse;
+  animation: thing 1s -0.0625s linear infinite alternate-reverse; }
+
+.thing:nth-child(3):before, .thing:nth-child(3):after {
+  left: 1.5em; }
+
+.thing:nth-child(3):before {
+  -webkit-animation: thing 1s -0.125s linear infinite alternate;
+  animation: thing 1s -0.125s linear infinite alternate; }
+
+.thing:nth-child(3):after {
+  -webkit-animation: thing 1s -0.125s linear infinite alternate-reverse;
+  animation: thing 1s -0.125s linear infinite alternate-reverse; }
+
+.thing:nth-child(4):before, .thing:nth-child(4):after {
+  left: 2.25em; }
+
+.thing:nth-child(4):before {
+  -webkit-animation: thing 1s -0.1875s linear infinite alternate;
+  animation: thing 1s -0.1875s linear infinite alternate; }
+
+.thing:nth-child(4):after {
+  -webkit-animation: thing 1s -0.1875s linear infinite alternate-reverse;
+  animation: thing 1s -0.1875s linear infinite alternate-reverse; }
+
+.thing:nth-child(5):before, .thing:nth-child(5):after {
+  left: 3em; }
+
+.thing:nth-child(5):before {
+  -webkit-animation: thing 1s -0.25s linear infinite alternate;
+  animation: thing 1s -0.25s linear infinite alternate; }
+
+.thing:nth-child(5):after {
+  -webkit-animation: thing 1s -0.25s linear infinite alternate-reverse;
+  animation: thing 1s -0.25s linear infinite alternate-reverse; }
+
+.thing:nth-child(6):before, .thing:nth-child(6):after {
+  left: 3.75em; }
+
+.thing:nth-child(6):before {
+  -webkit-animation: thing 1s -0.3125s linear infinite alternate;
+  animation: thing 1s -0.3125s linear infinite alternate; }
+
+.thing:nth-child(6):after {
+  -webkit-animation: thing 1s -0.3125s linear infinite alternate-reverse;
+  animation: thing 1s -0.3125s linear infinite alternate-reverse; }
+
+.thing:nth-child(7):before, .thing:nth-child(7):after {
+  left: 4.5em; }
+
+.thing:nth-child(7):before {
+  -webkit-animation: thing 1s -0.375s linear infinite alternate;
+  animation: thing 1s -0.375s linear infinite alternate; }
+
+.thing:nth-child(7):after {
+  -webkit-animation: thing 1s -0.375s linear infinite alternate-reverse;
+  animation: thing 1s -0.375s linear infinite alternate-reverse; }
+
+.thing:nth-child(8):before, .thing:nth-child(8):after {
+  left: 5.25em; }
+
+.thing:nth-child(8):before {
+  -webkit-animation: thing 1s -0.4375s linear infinite alternate;
+  animation: thing 1s -0.4375s linear infinite alternate; }
+
+.thing:nth-child(8):after {
+  -webkit-animation: thing 1s -0.4375s linear infinite alternate-reverse;
+  animation: thing 1s -0.4375s linear infinite alternate-reverse; }
+
+.thing:nth-child(9):before, .thing:nth-child(9):after {
+  left: 6em; }
+
+.thing:nth-child(9):before {
+  -webkit-animation: thing 1s -0.5s linear infinite alternate;
+  animation: thing 1s -0.5s linear infinite alternate; }
+
+.thing:nth-child(9):after {
+  -webkit-animation: thing 1s -0.5s linear infinite alternate-reverse;
+  animation: thing 1s -0.5s linear infinite alternate-reverse; }
+
+.thing:nth-child(10):before, .thing:nth-child(10):after {
+  left: 6.75em; }
+
+.thing:nth-child(10):before {
+  -webkit-animation: thing 1s -0.5625s linear infinite alternate;
+  animation: thing 1s -0.5625s linear infinite alternate; }
+
+.thing:nth-child(10):after {
+  -webkit-animation: thing 1s -0.5625s linear infinite alternate-reverse;
+  animation: thing 1s -0.5625s linear infinite alternate-reverse; }
+
+.thing:nth-child(11):before, .thing:nth-child(11):after {
+  left: 7.5em; }
+
+.thing:nth-child(11):before {
+  -webkit-animation: thing 1s -0.625s linear infinite alternate;
+  animation: thing 1s -0.625s linear infinite alternate; }
+
+.thing:nth-child(11):after {
+  -webkit-animation: thing 1s -0.625s linear infinite alternate-reverse;
+  animation: thing 1s -0.625s linear infinite alternate-reverse; }
+
+.thing:nth-child(12):before, .thing:nth-child(12):after {
+  left: 8.25em; }
+
+.thing:nth-child(12):before {
+  -webkit-animation: thing 1s -0.6875s linear infinite alternate;
+  animation: thing 1s -0.6875s linear infinite alternate; }
+
+.thing:nth-child(12):after {
+  -webkit-animation: thing 1s -0.6875s linear infinite alternate-reverse;
+  animation: thing 1s -0.6875s linear infinite alternate-reverse; }
+
+.thing:nth-child(13):before, .thing:nth-child(13):after {
+  left: 9em; }
+
+.thing:nth-child(13):before {
+  -webkit-animation: thing 1s -0.75s linear infinite alternate;
+  animation: thing 1s -0.75s linear infinite alternate; }
+
+.thing:nth-child(13):after {
+  -webkit-animation: thing 1s -0.75s linear infinite alternate-reverse;
+  animation: thing 1s -0.75s linear infinite alternate-reverse; }
+
+.thing:nth-child(14):before, .thing:nth-child(14):after {
+  left: 9.75em; }
+
+.thing:nth-child(14):before {
+  -webkit-animation: thing 1s -0.8125s linear infinite alternate;
+  animation: thing 1s -0.8125s linear infinite alternate; }
+
+.thing:nth-child(14):after {
+  -webkit-animation: thing 1s -0.8125s linear infinite alternate-reverse;
+  animation: thing 1s -0.8125s linear infinite alternate-reverse; }
+
+.thing:nth-child(15):before, .thing:nth-child(15):after {
+  left: 10.5em; }
+
+.thing:nth-child(15):before {
+  -webkit-animation: thing 1s -0.875s linear infinite alternate;
+  animation: thing 1s -0.875s linear infinite alternate; }
+
+.thing:nth-child(15):after {
+  -webkit-animation: thing 1s -0.875s linear infinite alternate-reverse;
+  animation: thing 1s -0.875s linear infinite alternate-reverse; }
+
+.thing:nth-child(16):before, .thing:nth-child(16):after {
+  left: 11.25em; }
+
+.thing:nth-child(16):before {
+  -webkit-animation: thing 1s -0.9375s linear infinite alternate;
+  animation: thing 1s -0.9375s linear infinite alternate; }
+
+.thing:nth-child(16):after {
+  -webkit-animation: thing 1s -0.9375s linear infinite alternate-reverse;
+  animation: thing 1s -0.9375s linear infinite alternate-reverse; }
+
+@-webkit-keyframes thing {
+  0% {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  100% {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); } }
+@keyframes thing {
+  0% {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  100% {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); } }
 @media print {
   section#questions {
     display: none; }
