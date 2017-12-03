@@ -11,11 +11,11 @@ html, body {
 
 body {
   font: 100% Dosis;
-  color: #F2F2EB;
+  color: #020202;
   height: 100%;
   width: 100%;
   font-weight: 300;
-  background-color: #363B5D; }
+  background-color: #F2F2EB; }
 
 section {
   width: 100%;
@@ -103,7 +103,7 @@ section {
         margin: 50px auto 0; }
   section#canvas {
     height: 80%;
-    background-color: #363B5D;
+    background-color: #F2F2EB;
     overflow: hidden; }
   section#questions {
     bottom: 0;
@@ -125,22 +125,22 @@ button, #reset, #save {
   white-space: nowrap;
   font-weight: 500;
   font-size: 1rem;
-  color: #dedecc;
+  color: black;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
   padding: 0.8rem 2rem;
-  border: 2px solid #F2F2EB;
+  border: 2px solid #020202;
   border-radius: 2px;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   z-index: 2;
   background-color: transparent; }
   button:hover, #reset:hover, #save:hover {
-    color: #363B5D; }
+    color: #F2F2EB; }
   button:focus, #reset:focus, #save:focus {
-    color: #363B5D; }
+    color: #F2F2EB; }
   button:before, #reset:before, #save:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
@@ -151,7 +151,7 @@ button, #reset, #save {
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #F2F2EB;
+    background-color: #020202;
     z-index: -1; }
   button:hover:before, #reset:hover:before, #save:hover:before {
     -webkit-transition: 0.5s all ease;
@@ -174,15 +174,15 @@ button, #reset, #save {
   margin-left: 2rem; }
 
 #startButton {
-  background-color: #363B5D;
+  background-color: #F2F2EB;
   color: white; }
   #startButton:active {
     transform: translateY(3px); }
   #startButton:hover {
     background-color: white;
-    color: #363B5D; }
+    color: #F2F2EB; }
   #startButton::after {
-    background-color: #494f7d; }
+    background-color: white; }
 
 #position {
   width: 1px;
@@ -340,16 +340,18 @@ button, #reset, #save {
   position: absolute;
   bottom: 2%;
   right: 2%;
-  background-color: #F2F2EB;
+  background-color: transparent;
   border-radius: 100px;
   width: 50px;
   height: 50px;
   vertical-align: middle;
   display: inline;
   cursor: pointer;
-  font-weight: 600; }
+  font-weight: 600;
+  border: 2px solid #020202; }
   #infos-btn:hover {
-    opacity: .7; }
+    color: grey;
+    border: 2px solid grey; }
   #infos-btn p {
     margin: 0;
     line-height: 50px; }

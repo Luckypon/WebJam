@@ -1,8 +1,8 @@
 $font-stack:    Dosis;
-$white: #F2F2EB;
+$white: #020202;
 $positionX: 0;
-$background-color : #363B5D;
-$background-canvas : #363B5D;
+$background-color : #F2F2EB;
+$background-canvas : #F2F2EB;
 
 *,
 *::before,
@@ -412,7 +412,7 @@ button, #reset, #save{
 			height: 75px;
 			width: 1px;
 			margin-left: 35px;
-			background-color: $white;
+			background-color: $background-color;
 			transform: rotate(45deg);
 			-ms-transform: rotate(45deg);
 			-moz-transform: rotate(45deg);
@@ -422,7 +422,7 @@ button, #reset, #save{
 		.close .lr .rl {
 			height: 75px;
 			width: 1px;
-			background-color: $white;
+			background-color: $background-color;
 			transform: rotate(90deg);
 			-ms-transform: rotate(90deg);
 			-moz-transform: rotate(90deg);
@@ -458,7 +458,7 @@ button, #reset, #save{
 		position: absolute;
 		bottom: 2%;
 		right: 2%;
-		background-color: $white;
+		background-color: transparent;
 		border-radius: 100px;
 		width: 50px;
 		height: 50px;
@@ -466,9 +466,11 @@ button, #reset, #save{
 		display: inline;
 		cursor:pointer;
 		font-weight: 600;
+		border:2px solid $white;
 
 		&:hover{
-			opacity:.7;
+			color:grey;
+			border:2px solid grey;
 		}
 
 		p{ 

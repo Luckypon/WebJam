@@ -60,7 +60,7 @@ function reset(){
 	$(".calque").hide();
 	$(".calque").removeClass('move');
 	$(".calque").show();
-	$("#canvas").css("background", "#363B5D no-repeat");
+	$("#canvas").css("background", "#F2F2EB no-repeat");
 	/*$(".calque > img").attr("src", "");*/
 }
 
