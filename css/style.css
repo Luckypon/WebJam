@@ -238,7 +238,8 @@ button, #reset, #save {
     display: none; }
 
   section#canvas {
-    height: 100%; }
+    height: 100%;
+    -webkit-print-color-adjust: exact; }
 
   #infos-btn {
     display: none; }

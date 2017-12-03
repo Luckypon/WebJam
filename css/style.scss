@@ -324,6 +324,7 @@ button, #reset, #save{
 	}
 	section#canvas{
 		height: 100%;
+		-webkit-print-color-adjust: exact;
 	}
 	#infos-btn {
 		display: none;
