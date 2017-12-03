@@ -11,6 +11,13 @@ section {
   margin: auto;
   position: absolute;
   box-sizing: border-box; }
+  section#start {
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: #bf4937; }
   section#canvas {
     height: 75%;
     background-color: #e5d39a;
@@ -22,7 +29,7 @@ section {
     font-weight: 600;
     font-size: 1.5rem; }
 
-button {
+button, #reset {
   padding: 0.8rem 2rem;
   text-transform: uppercase;
   font-weight: 500;
@@ -31,8 +38,9 @@ button {
   margin: 1rem;
   background-color: #363B5D;
   color: white;
-  border: 1px solid #F2F2EB; }
-  button:hover {
+  border: 1px solid #F2F2EB;
+  cursor: pointer; }
+  button:hover, #reset:hover {
     background-color: #F2F2EB;
     color: #363B5D;
     border: 1px solid #363B5D; }
@@ -70,6 +78,7 @@ button {
   height: 100%;
   width: 100%;
   display: none;
+  z-index: 2;
   background-color: rgba(20, 20, 20, 0.6); }
   #infos .close {
     z-index: 1000;

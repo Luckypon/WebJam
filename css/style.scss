@@ -18,7 +18,15 @@ section{
 	margin:auto;
 	position: absolute;
 	box-sizing:border-box;
-	
+
+	&#start{
+		position: fixed;
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+		background-color: #bf4937;
+	}
 
 	&#canvas{
 		height:75%;
@@ -35,17 +43,18 @@ section{
 	}
 }
 
-button{
+button, #reset{
 	padding: 0.8rem 2rem;
 	text-transform: uppercase;
 	font-weight:500;
 	font-size:1rem;
 	border:0;
 	margin:1rem;
-	
+
 	background-color:#363B5D;
 	color:white;
 	border:1px solid $white;
+	cursor: pointer;
 
 	&:hover{
 		background-color:$white;
@@ -78,12 +87,12 @@ button{
 
 	#totem{
 		transform:translate(-50%,-50%);
-	} 
+	}
 
 	#vegetation{
 		right:0;
 		bottom:0
-	} 
+	}
 }
 
 #reset{
@@ -98,6 +107,7 @@ button{
 	height:100%;
 	width:100%;
 	display:none;
+	z-index: 2;
 	background-color: rgba(20,20,20,.6);
 
 	.close {
@@ -172,4 +182,3 @@ button{
 		opacity:.7;
 	}
 }
-
