@@ -193,53 +193,90 @@ button, #reset, #save {
   position: absolute; }
   #position .calque {
     position: absolute;
-    /* background-color:$white; */
-    height: auto; }
+    height: auto;
+    -webkit-transition: all 1.0s ease;
+    -moz-transition: all 1.0s ease;
+    -o-transition: all 1.0s ease;
+    -ms-transition: all 1.0s ease;
+    transition: all 1.0s ease;
+    opacity: 0; }
     #position .calque img {
       max-width: 100%;
       height: auto; }
   #position #vegetationA {
+    top: 10vh;
+    left: 10vw;
     width: 830px;
     transform: translate(-56%, -39%); }
   #position #vegetationP {
+    top: 10vh;
+    left: 10vw;
     width: 822px;
     transform: translate(-55%, -37%); }
   #position #animal1A {
+    top: -9vh;
+    left: 9vw;
     width: 214px;
     transform: translate(-98%, -1%); }
   #position #animal1P {
+    top: -9vh;
+    left: 9vw;
     width: 214px;
     transform: translate(-97%, 1%); }
   #position #motifA {
+    top: 9vh;
+    left: -9vw;
     width: 659px;
     transform: translate(-63%, -43%); }
   #position #motifP {
+    top: 9vh;
+    left: -9vw;
     width: 548px;
     transform: translate(-58%, -43%); }
   #position #animal2A {
+    top: 9vh;
+    left: 10vw;
     width: 348px;
     transform: translate(-16%, 44%); }
   #position #animal2P {
+    top: 9vh;
+    left: 10vw;
     width: 333px;
     transform: translate(-24%, 45%); }
   #position #fruitA {
+    top: -9vh;
+    left: -10vw;
     width: 121px;
     transform: translate(-214%, 121%); }
   #position #fruitP {
+    top: -9vh;
+    left: -10vw;
     width: 118px;
     transform: translate(-208%, 125%); }
   #position #couronneA {
+    top: -20vh;
+    left: 0vw;
     width: 276px;
     transform: translate(-50%, -97%); }
   #position #couronneP {
+    top: -20vh;
+    left: 0vw;
     width: 282px;
     transform: translate(-50%, -94%); }
   #position #totemA {
+    top: 20vh;
+    left: 0vw;
     width: 277px;
     transform: translate(-50%, -39%); }
   #position #totemP {
+    top: 20vh;
+    left: 0vw;
     width: 276px;
     transform: translate(-50%, -27%); }
+  #position .calque.move {
+    top: 0px !important;
+    left: 0px !important;
+    opacity: 1; }
 
 #infos {
   height: 100%;
@@ -283,7 +320,7 @@ button, #reset, #save {
     background-color: #F2F2EB;
     color: #363B5D;
     text-align: center;
-    padding: 5%;
+    padding: 2%;
     width: 50%;
     height: 50%;
     position: absolute;

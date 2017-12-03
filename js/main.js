@@ -58,6 +58,8 @@ function ajaxData(data, container) {
 function reset(){
 	$("#questions").empty();
 	$(".calque").hide();
+	$(".calque").removeClass('move');
+	$(".calque").show();
 	$("#canvas").css("background", "#363B5D no-repeat");
 	/*$(".calque > img").attr("src", "");*/
 }
@@ -80,9 +82,12 @@ function showImage() {
 		$("#canvas").css("background", "url("+imageURL+") repeat");
 	}
 	else{
-		element.show();
+		/*element.show();*/
+		element.addClass('move');
 		console.log("#"+data1+data2);
 	}
+
+
 
 	nextQuestion(number);
 }
