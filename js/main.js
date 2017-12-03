@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	$('#questions').on( "click.", 'button', showImage);
 
-	$('#questions').on( "click", '#reset', function(){
+	$('#reset').on( "click", '#resetBtn', function(){
 		reset();
 		requestAjax("question1", "#questions");
 	});
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		$("#infos").hide();
 	});
 
-	$('#questions').on( "click", '#save', function(){
+	$('#reset').on( "click", '#saveBtn', function(){
 		window.print();
 	});
 
@@ -57,8 +57,11 @@ function ajaxData(data, container) {
 /******** Reset the canvas ********/
 function reset(){
 	$("#questions").empty();
+	$("#questions").show();
+	$("#reset").empty();
 	$(".calque").hide();
 	$("#canvas").css("background", "#363B5D no-repeat");
+	$("#canvas").css("height", "80%");
 	/*$(".calque > img").attr("src", "");*/
 }
 
@@ -69,7 +72,6 @@ function showImage() {
 	var parent = $(this).parent();
 	var data1 = parent.data("value");
 	var data2 = $(this).data("value");
-	console.log(parent);
 	var element = $("#"+data1+data2);
 	var img = $("#"+data1+data2+" > img");
 	var imageURL = "img/"+data1+data2+".png";
@@ -81,7 +83,6 @@ function showImage() {
 	}
 	else{
 		element.show();
-		console.log("#"+data1+data2);
 	}
 
 	nextQuestion(number);
@@ -89,7 +90,9 @@ function showImage() {
 
 function nextQuestion(number){
 	if (number == 8) {
-		requestAjax("reset", "#questions");
+		requestAjax("reset", "#reset");
+		$("#questions").hide();
+		$("#canvas").css("height", "100%");
 	}
 	else{
 		requestAjax("question"+(number+1), "#questions");

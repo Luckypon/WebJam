@@ -1,3 +1,6 @@
+@font-face {
+  font-family: "Anothershabby";
+  src: url("fonts/Anothershabby_trial.ttf"); }
 *,
 *::before,
 *::after {
@@ -10,7 +13,7 @@ html, body {
   width: 100%; }
 
 body {
-  font: 100% Dosis;
+  font-family: Dosis;
   color: #F2F2EB;
   height: 100%;
   width: 100%;
@@ -73,9 +76,9 @@ section {
       height: 100%;
       opacity: 0;
       animation-name: intro;
-      animation-duration: 3s;
+      animation-duration: 5s;
       animation-timing-function: ease-in;
-      animation-delay: 1s;
+      animation-delay: 3s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards; }
 @-webkit-keyframes intro {
@@ -85,22 +88,20 @@ section {
     opacity: 1; } }
     section#start .text {
       position: absolute;
-      bottom: 10%;
+      bottom: 15%;
       left: 50%;
       transform: translateX(-50%);
       color: #000;
       opacity: 0;
       animation-name: intro;
-      animation-duration: 2s;
+      animation-duration: 5s;
       animation-timing-function: ease-in;
-      animation-delay: 2s;
+      animation-delay: 5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards; }
       section#start .text p {
-        font-size: 1.5rem; }
-      section#start .text button {
-        display: block;
-        margin: 50px auto 0; }
+        font-size: 1.5rem;
+        text-align: center; }
   section#canvas {
     height: 80%;
     background-color: #363B5D;
@@ -116,8 +117,32 @@ section {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+  section#reset {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
 
-button, #reset, #save {
+.scriptButton {
+  font-family: "Anothershabby", sans-serif !important;
+  font-size: 2.5rem !important;
+  display: block;
+  margin: 50px auto 0;
+  color: #000;
+  background: none;
+  border: 0;
+  line-height: normal;
+  padding: 0;
+  cursor: pointer; }
+
+#resetBtn {
+  position: absolute;
+  left: 5%; }
+
+#saveBtn {
+  position: absolute;
+  right: 5%; }
+
+#questions button {
   text-decoration: none;
   -webkit-transition: 0.4s all ease;
   transition: 0.4s ease all;
@@ -137,11 +162,11 @@ button, #reset, #save {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   z-index: 2;
   background-color: transparent; }
-  button:hover, #reset:hover, #save:hover {
+  #questions button:hover {
     color: #363B5D; }
-  button:focus, #reset:focus, #save:focus {
+  #questions button:focus {
     color: #363B5D; }
-  button:before, #reset:before, #save:before {
+  #questions button:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
     position: absolute;
@@ -153,36 +178,25 @@ button, #reset, #save {
     content: '';
     background-color: #F2F2EB;
     z-index: -1; }
-  button:hover:before, #reset:hover:before, #save:hover:before {
+  #questions button:hover:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
     left: 0;
     right: 0;
     opacity: 1; }
-  button:focus:before, #reset:focus:before, #save:focus:before {
+  #questions button:focus:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
     left: 0;
     right: 0;
     opacity: 1; }
-  button:active, #reset:active, #save:active {
+  #questions button:active {
     transform: translateY(3px); }
 
 #questions > .question button:nth-child(1), #questions > .question div:nth-child(1) {
   margin-right: 2rem; }
 #questions > .question button:nth-child(2), #questions > .question div:nth-child(2) {
   margin-left: 2rem; }
-
-#startButton {
-  background-color: #363B5D;
-  color: white; }
-  #startButton:active {
-    transform: translateY(3px); }
-  #startButton:hover {
-    background-color: white;
-    color: #363B5D; }
-  #startButton::after {
-    background-color: #494f7d; }
 
 #position {
   width: 1px;
@@ -327,6 +341,9 @@ button, #reset, #save {
 
   #position #vegetationP {
     width: 750px;
-    transform: translate(-55%, -37%); } }
+    transform: translate(-55%, -37%); }
+
+  #reset {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
