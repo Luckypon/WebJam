@@ -16,8 +16,7 @@ section {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
-    background-color: #bf4937; }
+    z-index: 1; }
     section#start #videoP {
       position: fixed;
       width: 100%;
@@ -114,18 +113,54 @@ button, #reset {
   background-color: red;
   position: absolute; }
   #position .calque {
-    width: 200px;
-    height: 200px;
     position: absolute;
-    background-color: #F2F2EB; }
+    /* background-color:$white; */
+    height: auto; }
     #position .calque img {
       max-width: 100%;
       height: auto; }
-  #position #totem {
-    transform: translate(-50%, -50%); }
-  #position #vegetation {
-    right: 0;
-    bottom: 0; }
+  #position #vegetationA {
+    width: 830px;
+    transform: translate(-56%, -39%); }
+  #position #vegetationP {
+    width: 822px;
+    transform: translate(-55%, -37%); }
+  #position #animal1A {
+    width: 214px;
+    transform: translate(-98%, -1%); }
+  #position #animal1P {
+    width: 214px;
+    transform: translate(-97%, 1%); }
+  #position #motifA {
+    width: 659px;
+    transform: translate(-63%, -43%); }
+  #position #motifP {
+    width: 548px;
+    transform: translate(-58%, -43%); }
+  #position #animal2A {
+    width: 348px;
+    transform: translate(-16%, 44%); }
+  #position #animal2P {
+    width: 333px;
+    transform: translate(-24%, 45%); }
+  #position #fruitA {
+    width: 121px;
+    transform: translate(-214%, 121%); }
+  #position #fruitP {
+    width: 118px;
+    transform: translate(-208%, 125%); }
+  #position #couronneA {
+    width: 276px;
+    transform: translate(-50%, -97%); }
+  #position #couronneP {
+    width: 282px;
+    transform: translate(-50%, -94%); }
+  #position #totemA {
+    width: 277px;
+    transform: translate(-50%, -39%); }
+  #position #totemP {
+    width: 276px;
+    transform: translate(-50%, -27%); }
 
 #reset {
   position: absolute;

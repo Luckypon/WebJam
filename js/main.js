@@ -48,6 +48,8 @@ function reset(){
 	requestAjax("start", "#intro");
 	$("#questions").empty();
 	$(".calque").hide();
+	$("#canvas").css("background", "url() repeat");
+	/*$(".calque > img").attr("src", "");*/
 }
 
 /******** Reset the canvas ********/
@@ -58,9 +60,9 @@ function showImage() {
 	var data1 = parent.data("value");
 	var data2 = $(this).data("value");
 
-	var element = $("#"+data1);
-	var img = $("#"+data1+" > img");
-	var imageURL = "img/"+data1+data2+".jpg";
+	var element = $("#"+data1+data2);
+	var img = $("#"+data1+data2+" > img");
+	var imageURL = "img/"+data1+data2+".png";
 
 	var number = parent.data("number");
 
@@ -68,15 +70,15 @@ function showImage() {
 		$("#canvas").css("background", "url("+imageURL+") repeat");
 	}
 	else{
-		img.attr("src", imageURL);
 		element.show();
+		console.log("#"+data1+data2);
 	}
 
 	nextQuestion(number);
 }
 
 function nextQuestion(number){
-	if (number == 7) {
+	if (number == 8) {
 		requestAjax("reset", "#questions");
 	}
 	else{
