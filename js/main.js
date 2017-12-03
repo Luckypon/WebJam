@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
+	requestAjax("start", "#intro");
 	reset();
+
 
 	// EVENTS
 	$("#intro").on( "click", 'button', function(){
@@ -12,6 +14,7 @@ $(document).ready(function() {
 
 	$('#questions').on( "click", '#reset', function(){
 		reset();
+		requestAjax("question1", "#questions");
 	});
 
 	$('#infos-btn').click(function(e){
@@ -22,21 +25,25 @@ $(document).ready(function() {
 		$("#infos").hide();
 	});
 
+	$('#questions').on( "click", '#save', function(){
+		window.print();
+	});
+
 });
 
 /******** Change HTLM content with AJAX ********/
 //argument file = the file within the content you want to add
 function requestAjax(file, container) {
 
-  var xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-      ajaxData(xhr.responseText, container);
-    }
-  };
-  xhr.open("GET", file+".html", true);
-  xhr.send(null);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+			ajaxData(xhr.responseText, container);
+		}
+	};
+	xhr.open("GET", file+".html", true);
+	xhr.send(null);
 }
 
 function ajaxData(data, container) {
@@ -45,10 +52,9 @@ function ajaxData(data, container) {
 
 /******** Reset the canvas ********/
 function reset(){
-	requestAjax("start", "#intro");
 	$("#questions").empty();
 	$(".calque").hide();
-	$("#canvas").css("background", "url() repeat");
+	$("#canvas").css("background", "#e5d39a no-repeat");
 	/*$(".calque > img").attr("src", "");*/
 }
 
@@ -59,7 +65,7 @@ function showImage() {
 	var parent = $(this).parent();
 	var data1 = parent.data("value");
 	var data2 = $(this).data("value");
-
+	console.log(parent);
 	var element = $("#"+data1+data2);
 	var img = $("#"+data1+data2+" > img");
 	var imageURL = "img/"+data1+data2+".png";

@@ -103,21 +103,28 @@ section{
 	}
 
 	&#canvas{
-		height:75%;
+		height:80%;
 		background-color: $background-canvas;
 		overflow:hidden;
 	}
 
 	&#questions{
 		bottom:0;
-		height:25%;
+		height:20%;
 		text-align: center;
 		font-weight:600;
 		font-size:1.5rem;
+
+		.question{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	}
 }
 
-button, #reset{
+button, #reset, #save{
 	padding: 0.8rem 2rem;
 	text-transform: uppercase;
 	font-weight:500;
@@ -223,13 +230,13 @@ button, #reset{
 	}
 }
 
-#reset{
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	margin:0;
-}
+// #reset{
+// 	position: absolute;
+// 	top:50%;
+// 	left:50%;
+// 	transform:translate(-50%,-50%);
+// 	margin:0;
+// }
 
 #infos{
 	height:100%;
@@ -308,5 +315,21 @@ button, #reset{
 
 	&:hover{
 		opacity:.7;
+	}
+}
+
+@media print {
+	section#questions{
+		display: none;
+	}
+	section#canvas{
+		height: 100%;
+	}
+	#infos-btn {
+		display: none;
+	}
+	#position #vegetationP {
+		width: 750px;
+		transform: translate(-55%, -37%);
 	}
 }
