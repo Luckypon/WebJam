@@ -17,7 +17,8 @@ section {
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    background-color: #bf4937; }
+    background-color: #363B5D;
+    text-align: center; }
   section#canvas {
     height: 75%;
     background-color: #e5d39a;

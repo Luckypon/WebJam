@@ -25,7 +25,8 @@ section{
 		width: 100vw;
 		height: 100vh;
 		z-index: 1;
-		background-color: #bf4937;
+		background-color: $background-color;
+		text-align: center;
 	}
 
 	&#canvas{
@@ -34,7 +35,7 @@ section{
 		overflow:hidden;
 	}
 
-	&#questions{
+	&#questions{ 
 		bottom:0;
 		height:25%;
 		text-align: center;
