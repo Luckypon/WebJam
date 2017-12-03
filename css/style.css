@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
 body {
   font: 100% Dosis;
   color: #F2F2EB;
@@ -31,6 +42,8 @@ section {
       width: 100%;
       height: 100%;
       -webkit-clip-path: polygon(82% 0, 0% 100%, 0 0);
+      -moz-clip-path: polygon(82% 0, 0% 100%, 0 0);
+      -ms-clip-path: polygon(82% 0, 0% 100%, 0 0);
       clip-path: polygon(82% 0, 0% 100%, 0 0); }
       section#start #videoP video {
         position: absolute;
@@ -45,6 +58,8 @@ section {
       bottom: 0;
       right: 0;
       -webkit-clip-path: polygon(82% 0, 100% 0, 100% 100%, 0% 100%);
+      -moz-clip-path: polygon(82% 0, 100% 0, 100% 100%, 0% 100%);
+      -ms-clip-path: polygon(82% 0, 100% 0, 100% 100%, 0% 100%);
       clip-path: polygon(82% 0, 100% 0, 100% 100%, 0% 100%); }
       section#start #videoA video {
         position: absolute;
@@ -58,9 +73,9 @@ section {
       height: 100%;
       opacity: 0;
       animation-name: intro;
-      animation-duration: 6s;
+      animation-duration: 3s;
       animation-timing-function: ease-in;
-      animation-delay: 3s;
+      animation-delay: 1s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards; }
 @-webkit-keyframes intro {
@@ -76,19 +91,19 @@ section {
       color: #000;
       opacity: 0;
       animation-name: intro;
-      animation-duration: 6s;
+      animation-duration: 2s;
       animation-timing-function: ease-in;
-      animation-delay: 5s;
+      animation-delay: 2s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards; }
       section#start .text p {
-        font-size: 25px; }
+        font-size: 1.5rem; }
       section#start .text button {
         display: block;
         margin: 50px auto 0; }
   section#canvas {
     height: 80%;
-    background-color: #e5d39a;
+    background-color: #363B5D;
     overflow: hidden; }
   section#questions {
     bottom: 0;
@@ -103,20 +118,71 @@ section {
       transform: translate(-50%, -50%); }
 
 button, #reset, #save {
-  padding: 0.8rem 2rem;
-  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s ease all;
+  cursor: pointer;
+  white-space: nowrap;
   font-weight: 500;
   font-size: 1rem;
-  border: 0;
-  margin: 1rem;
-  background-color: #363B5D;
-  color: white;
-  border: 1px solid #F2F2EB;
-  cursor: pointer; }
+  color: #dedecc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding: 0.8rem 2rem;
+  border: 2px solid #F2F2EB;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  background-color: transparent; }
   button:hover, #reset:hover, #save:hover {
+    color: #363B5D; }
+  button:focus, #reset:focus, #save:focus {
+    color: #363B5D; }
+  button:before, #reset:before, #save:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
     background-color: #F2F2EB;
-    color: #363B5D;
-    border: 1px solid #363B5D; }
+    z-index: -1; }
+  button:hover:before, #reset:hover:before, #save:hover:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1; }
+  button:focus:before, #reset:focus:before, #save:focus:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1; }
+  button:active, #reset:active, #save:active {
+    transform: translateY(3px); }
+
+#questions > .question button:nth-child(1), #questions > .question div:nth-child(1) {
+  margin-right: 2rem; }
+#questions > .question button:nth-child(2), #questions > .question div:nth-child(2) {
+  margin-left: 2rem; }
+
+#startButton {
+  background-color: #363B5D;
+  color: white; }
+  #startButton:active {
+    transform: translateY(3px); }
+  #startButton:hover {
+    background-color: white;
+    color: #363B5D; }
+  #startButton::after {
+    background-color: #494f7d; }
 
 #position {
   width: 1px;
@@ -124,7 +190,6 @@ button, #reset, #save {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: red;
   position: absolute; }
   #position .calque {
     position: absolute;
@@ -200,6 +265,7 @@ button, #reset, #save {
     background-color: #F2F2EB;
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     z-index: 1051; }
   #infos .close .lr .rl {
@@ -208,6 +274,7 @@ button, #reset, #save {
     background-color: #F2F2EB;
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     z-index: 1052; }
   #infos .close:hover {
@@ -231,7 +298,7 @@ button, #reset, #save {
   position: absolute;
   bottom: 2%;
   right: 2%;
-  background-color: white;
+  background-color: #F2F2EB;
   border-radius: 100px;
   width: 50px;
   height: 50px;
@@ -241,6 +308,9 @@ button, #reset, #save {
   font-weight: 600; }
   #infos-btn:hover {
     opacity: .7; }
+  #infos-btn p {
+    margin: 0;
+    line-height: 50px; }
 
 @media print {
   section#questions {
@@ -248,6 +318,8 @@ button, #reset, #save {
 
   section#canvas {
     height: 100%;
+    -ms-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
     -webkit-print-color-adjust: exact; }
 
   #infos-btn {

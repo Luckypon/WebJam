@@ -58,7 +58,7 @@ function ajaxData(data, container) {
 function reset(){
 	$("#questions").empty();
 	$(".calque").hide();
-	$("#canvas").css("background", "#e5d39a no-repeat");
+	$("#canvas").css("background", "#363B5D no-repeat");
 	/*$(".calque > img").attr("src", "");*/
 }
 
