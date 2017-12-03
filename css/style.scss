@@ -74,10 +74,9 @@ button, #reset{
 	position: absolute;
 
 	.calque{
-		width:200px;
-		height:200px;
 		position: absolute;
-		background-color:$white;
+		/* background-color:$white; */
+		height:auto;
 
 		img{
 			max-width:100%;
@@ -86,13 +85,36 @@ button, #reset{
 
 	}
 
-	#totem{
+
+	#vegetation{
+		width:800px;
 		transform:translate(-50%,-50%);
 	}
 
-	#vegetation{
-		right:0;
-		bottom:0
+	#animal1{
+		width:400px;
+		transform:translate(-60%,-50%);
+	}
+
+	#motif{
+		width:400px;
+		transform:translate(-60%,-50%);
+	}
+	#animal2{
+		width:400px;
+		transform:translate(-70%,-50%);
+	}
+	#fruit{
+		width:400px;
+		transform:translate(-80%,-50%);
+	}
+	#couronne{
+		width:400px;
+		transform:translate(-60%,-70%);
+	}
+	#totem{
+		width:400px;
+		transform:translate(-60%,-60%);
 	}
 }
 

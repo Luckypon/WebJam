@@ -59,7 +59,7 @@ function showImage() {
 
 	var element = $("#"+data1);
 	var img = $("#"+data1+" > img");
-	var imageURL = "img/"+data1+data2+".jpg";
+	var imageURL = "img/"+data1+data2+".png";
 
 	img.attr("src", imageURL);
 	element.show();
@@ -69,7 +69,7 @@ function showImage() {
 }
 
 function nextQuestion(number){
-	if (number == 7) {
+	if (number == 8) {
 		requestAjax("reset", "#questions");
 	}
 	else{

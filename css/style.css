@@ -55,18 +55,33 @@ button, #reset {
   background-color: red;
   position: absolute; }
   #position .calque {
-    width: 200px;
-    height: 200px;
     position: absolute;
-    background-color: #F2F2EB; }
+    /* background-color:$white; */
+    height: auto; }
     #position .calque img {
       max-width: 100%;
       height: auto; }
-  #position #totem {
-    transform: translate(-50%, -50%); }
   #position #vegetation {
-    right: 0;
-    bottom: 0; }
+    width: 800px;
+    transform: translate(-50%, -50%); }
+  #position #animal1 {
+    width: 400px;
+    transform: translate(-60%, -50%); }
+  #position #motif {
+    width: 400px;
+    transform: translate(-60%, -50%); }
+  #position #animal2 {
+    width: 400px;
+    transform: translate(-70%, -50%); }
+  #position #fruit {
+    width: 400px;
+    transform: translate(-80%, -50%); }
+  #position #couronne {
+    width: 400px;
+    transform: translate(-60%, -70%); }
+  #position #totem {
+    width: 400px;
+    transform: translate(-60%, -60%); }
 
 #reset {
   position: absolute;
