@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	window.setTimeout(function() {
 		$("#loader").hide();
-	}, 1000);
+	}, 3000);
 
 	requestAjax("start", "#intro");
 	reset();
@@ -60,9 +60,10 @@ function reset(){
 	$("#questions").show();
 	$("#reset").empty();
 	$(".calque").hide();
-	$("#canvas").css("background", "#363B5D no-repeat");
 	$("#canvas").css("height", "80%");
-	/*$(".calque > img").attr("src", "");*/
+	$(".calque").removeClass('move');
+	$(".calque").show();
+	$("#canvas").css("background", "#F2F2EB no-repeat");
 }
 
 /******** Reset the canvas ********/
@@ -82,8 +83,10 @@ function showImage() {
 		$("#canvas").css("background", "url("+imageURL+") repeat");
 	}
 	else{
-		element.show();
+		element.addClass('move');
 	}
+
+
 
 	nextQuestion(number);
 }

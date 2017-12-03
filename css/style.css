@@ -14,11 +14,11 @@ html, body {
 
 body {
   font-family: Dosis;
-  color: #F2F2EB;
+  color: #020202;
   height: 100%;
   width: 100%;
   font-weight: 300;
-  background-color: #363B5D; }
+  background-color: #F2F2EB; }
 
 section {
   width: 100%;
@@ -104,7 +104,7 @@ section {
         text-align: center; }
   section#canvas {
     height: 80%;
-    background-color: #363B5D;
+    background-color: #F2F2EB;
     overflow: hidden; }
   section#questions {
     bottom: 0;
@@ -150,22 +150,22 @@ section {
   white-space: nowrap;
   font-weight: 500;
   font-size: 1rem;
-  color: #dedecc;
+  color: black;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
   padding: 0.8rem 2rem;
-  border: 2px solid #F2F2EB;
+  border: 2px solid #020202;
   border-radius: 2px;
   position: relative;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   z-index: 2;
   background-color: transparent; }
   #questions button:hover {
-    color: #363B5D; }
+    color: #F2F2EB; }
   #questions button:focus {
-    color: #363B5D; }
+    color: #F2F2EB; }
   #questions button:before {
     -webkit-transition: 0.5s all ease;
     transition: 0.5s all ease;
@@ -176,7 +176,7 @@ section {
     bottom: 0;
     opacity: 0;
     content: '';
-    background-color: #F2F2EB;
+    background-color: #020202;
     z-index: -1; }
   #questions button:hover:before {
     -webkit-transition: 0.5s all ease;
@@ -207,53 +207,90 @@ section {
   position: absolute; }
   #position .calque {
     position: absolute;
-    /* background-color:$white; */
-    height: auto; }
+    height: auto;
+    -webkit-transition: all 1.0s ease;
+    -moz-transition: all 1.0s ease;
+    -o-transition: all 1.0s ease;
+    -ms-transition: all 1.0s ease;
+    transition: all 1.0s ease;
+    opacity: 0; }
     #position .calque img {
       max-width: 100%;
       height: auto; }
   #position #vegetationA {
+    top: 10vh;
+    left: 10vw;
     width: 830px;
     transform: translate(-56%, -39%); }
   #position #vegetationP {
+    top: 10vh;
+    left: 10vw;
     width: 822px;
     transform: translate(-55%, -37%); }
   #position #animal1A {
+    top: -9vh;
+    left: 9vw;
     width: 214px;
     transform: translate(-98%, -1%); }
   #position #animal1P {
+    top: -9vh;
+    left: 9vw;
     width: 214px;
     transform: translate(-97%, 1%); }
   #position #motifA {
+    top: 9vh;
+    left: -9vw;
     width: 659px;
     transform: translate(-63%, -43%); }
   #position #motifP {
+    top: 9vh;
+    left: -9vw;
     width: 548px;
     transform: translate(-58%, -43%); }
   #position #animal2A {
+    top: 9vh;
+    left: 10vw;
     width: 348px;
     transform: translate(-16%, 44%); }
   #position #animal2P {
+    top: 9vh;
+    left: 10vw;
     width: 333px;
     transform: translate(-24%, 45%); }
   #position #fruitA {
+    top: -9vh;
+    left: -10vw;
     width: 121px;
     transform: translate(-214%, 121%); }
   #position #fruitP {
+    top: -9vh;
+    left: -10vw;
     width: 118px;
     transform: translate(-208%, 125%); }
   #position #couronneA {
+    top: -20vh;
+    left: 0vw;
     width: 276px;
     transform: translate(-50%, -97%); }
   #position #couronneP {
+    top: -20vh;
+    left: 0vw;
     width: 282px;
     transform: translate(-50%, -94%); }
   #position #totemA {
+    top: 20vh;
+    left: 0vw;
     width: 277px;
     transform: translate(-50%, -39%); }
   #position #totemP {
+    top: 20vh;
+    left: 0vw;
     width: 276px;
     transform: translate(-50%, -27%); }
+  #position .calque.move {
+    top: 0px !important;
+    left: 0px !important;
+    opacity: 1; }
 
 #infos {
   height: 100%;
@@ -262,16 +299,14 @@ section {
   z-index: 2;
   background-color: rgba(20, 20, 20, 0.6); }
   #infos .close {
-    z-index: 1000;
-    position: fixed; }
-  #infos .close {
     position: absolute;
     width: 75px;
     height: 75px;
     background-color: transparent;
     top: 25px;
     right: 25px;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 10; }
   #infos .close .lr {
     height: 75px;
     width: 1px;
@@ -297,13 +332,18 @@ section {
     background-color: #F2F2EB;
     color: #363B5D;
     text-align: center;
-    padding: 5%;
-    width: 50%;
-    height: 50%;
+    padding: 0 2%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* contexte sur le parent */
+    flex-direction: column;
+    /* direction d'affichage verticale */
+    justify-content: center; }
 
 #infos-btn {
   color: black;
@@ -312,20 +352,245 @@ section {
   position: absolute;
   bottom: 2%;
   right: 2%;
-  background-color: #F2F2EB;
+  background-color: transparent;
   border-radius: 100px;
   width: 50px;
   height: 50px;
   vertical-align: middle;
   display: inline;
   cursor: pointer;
-  font-weight: 600; }
+  font-weight: 600;
+  border: 2px solid #020202; }
   #infos-btn:hover {
-    opacity: .7; }
+    color: grey;
+    border: 2px solid grey; }
   #infos-btn p {
     margin: 0;
     line-height: 50px; }
 
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*:before, *:after {
+  content: ""; }
+
+html, body {
+  height: 100%; }
+
+.loaderCool {
+  width: 12em;
+  height: 1.5em; }
+
+.loaderCool, .loaderCool *, .loaderCool *:before, .loaderCool *:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.thing:before, .thing:after {
+  right: auto;
+  width: 1.5em;
+  height: 0.09375em;
+  background: #f06060;
+  -webkit-transform-origin: right bottom 0;
+  transform-origin: right bottom 0; }
+
+.thing:nth-child(1):before, .thing:nth-child(1):after {
+  left: 0em; }
+
+.thing:nth-child(1):before {
+  -webkit-animation: thing 1s -0s linear infinite alternate;
+  animation: thing 1s -0s linear infinite alternate; }
+
+.thing:nth-child(1):after {
+  -webkit-animation: thing 1s -0s linear infinite alternate-reverse;
+  animation: thing 1s -0s linear infinite alternate-reverse; }
+
+.thing:nth-child(2):before, .thing:nth-child(2):after {
+  left: 0.75em; }
+
+.thing:nth-child(2):before {
+  -webkit-animation: thing 1s -0.0625s linear infinite alternate;
+  animation: thing 1s -0.0625s linear infinite alternate; }
+
+.thing:nth-child(2):after {
+  -webkit-animation: thing 1s -0.0625s linear infinite alternate-reverse;
+  animation: thing 1s -0.0625s linear infinite alternate-reverse; }
+
+.thing:nth-child(3):before, .thing:nth-child(3):after {
+  left: 1.5em; }
+
+.thing:nth-child(3):before {
+  -webkit-animation: thing 1s -0.125s linear infinite alternate;
+  animation: thing 1s -0.125s linear infinite alternate; }
+
+.thing:nth-child(3):after {
+  -webkit-animation: thing 1s -0.125s linear infinite alternate-reverse;
+  animation: thing 1s -0.125s linear infinite alternate-reverse; }
+
+.thing:nth-child(4):before, .thing:nth-child(4):after {
+  left: 2.25em; }
+
+.thing:nth-child(4):before {
+  -webkit-animation: thing 1s -0.1875s linear infinite alternate;
+  animation: thing 1s -0.1875s linear infinite alternate; }
+
+.thing:nth-child(4):after {
+  -webkit-animation: thing 1s -0.1875s linear infinite alternate-reverse;
+  animation: thing 1s -0.1875s linear infinite alternate-reverse; }
+
+.thing:nth-child(5):before, .thing:nth-child(5):after {
+  left: 3em; }
+
+.thing:nth-child(5):before {
+  -webkit-animation: thing 1s -0.25s linear infinite alternate;
+  animation: thing 1s -0.25s linear infinite alternate; }
+
+.thing:nth-child(5):after {
+  -webkit-animation: thing 1s -0.25s linear infinite alternate-reverse;
+  animation: thing 1s -0.25s linear infinite alternate-reverse; }
+
+.thing:nth-child(6):before, .thing:nth-child(6):after {
+  left: 3.75em; }
+
+.thing:nth-child(6):before {
+  -webkit-animation: thing 1s -0.3125s linear infinite alternate;
+  animation: thing 1s -0.3125s linear infinite alternate; }
+
+.thing:nth-child(6):after {
+  -webkit-animation: thing 1s -0.3125s linear infinite alternate-reverse;
+  animation: thing 1s -0.3125s linear infinite alternate-reverse; }
+
+.thing:nth-child(7):before, .thing:nth-child(7):after {
+  left: 4.5em; }
+
+.thing:nth-child(7):before {
+  -webkit-animation: thing 1s -0.375s linear infinite alternate;
+  animation: thing 1s -0.375s linear infinite alternate; }
+
+.thing:nth-child(7):after {
+  -webkit-animation: thing 1s -0.375s linear infinite alternate-reverse;
+  animation: thing 1s -0.375s linear infinite alternate-reverse; }
+
+.thing:nth-child(8):before, .thing:nth-child(8):after {
+  left: 5.25em; }
+
+.thing:nth-child(8):before {
+  -webkit-animation: thing 1s -0.4375s linear infinite alternate;
+  animation: thing 1s -0.4375s linear infinite alternate; }
+
+.thing:nth-child(8):after {
+  -webkit-animation: thing 1s -0.4375s linear infinite alternate-reverse;
+  animation: thing 1s -0.4375s linear infinite alternate-reverse; }
+
+.thing:nth-child(9):before, .thing:nth-child(9):after {
+  left: 6em; }
+
+.thing:nth-child(9):before {
+  -webkit-animation: thing 1s -0.5s linear infinite alternate;
+  animation: thing 1s -0.5s linear infinite alternate; }
+
+.thing:nth-child(9):after {
+  -webkit-animation: thing 1s -0.5s linear infinite alternate-reverse;
+  animation: thing 1s -0.5s linear infinite alternate-reverse; }
+
+.thing:nth-child(10):before, .thing:nth-child(10):after {
+  left: 6.75em; }
+
+.thing:nth-child(10):before {
+  -webkit-animation: thing 1s -0.5625s linear infinite alternate;
+  animation: thing 1s -0.5625s linear infinite alternate; }
+
+.thing:nth-child(10):after {
+  -webkit-animation: thing 1s -0.5625s linear infinite alternate-reverse;
+  animation: thing 1s -0.5625s linear infinite alternate-reverse; }
+
+.thing:nth-child(11):before, .thing:nth-child(11):after {
+  left: 7.5em; }
+
+.thing:nth-child(11):before {
+  -webkit-animation: thing 1s -0.625s linear infinite alternate;
+  animation: thing 1s -0.625s linear infinite alternate; }
+
+.thing:nth-child(11):after {
+  -webkit-animation: thing 1s -0.625s linear infinite alternate-reverse;
+  animation: thing 1s -0.625s linear infinite alternate-reverse; }
+
+.thing:nth-child(12):before, .thing:nth-child(12):after {
+  left: 8.25em; }
+
+.thing:nth-child(12):before {
+  -webkit-animation: thing 1s -0.6875s linear infinite alternate;
+  animation: thing 1s -0.6875s linear infinite alternate; }
+
+.thing:nth-child(12):after {
+  -webkit-animation: thing 1s -0.6875s linear infinite alternate-reverse;
+  animation: thing 1s -0.6875s linear infinite alternate-reverse; }
+
+.thing:nth-child(13):before, .thing:nth-child(13):after {
+  left: 9em; }
+
+.thing:nth-child(13):before {
+  -webkit-animation: thing 1s -0.75s linear infinite alternate;
+  animation: thing 1s -0.75s linear infinite alternate; }
+
+.thing:nth-child(13):after {
+  -webkit-animation: thing 1s -0.75s linear infinite alternate-reverse;
+  animation: thing 1s -0.75s linear infinite alternate-reverse; }
+
+.thing:nth-child(14):before, .thing:nth-child(14):after {
+  left: 9.75em; }
+
+.thing:nth-child(14):before {
+  -webkit-animation: thing 1s -0.8125s linear infinite alternate;
+  animation: thing 1s -0.8125s linear infinite alternate; }
+
+.thing:nth-child(14):after {
+  -webkit-animation: thing 1s -0.8125s linear infinite alternate-reverse;
+  animation: thing 1s -0.8125s linear infinite alternate-reverse; }
+
+.thing:nth-child(15):before, .thing:nth-child(15):after {
+  left: 10.5em; }
+
+.thing:nth-child(15):before {
+  -webkit-animation: thing 1s -0.875s linear infinite alternate;
+  animation: thing 1s -0.875s linear infinite alternate; }
+
+.thing:nth-child(15):after {
+  -webkit-animation: thing 1s -0.875s linear infinite alternate-reverse;
+  animation: thing 1s -0.875s linear infinite alternate-reverse; }
+
+.thing:nth-child(16):before, .thing:nth-child(16):after {
+  left: 11.25em; }
+
+.thing:nth-child(16):before {
+  -webkit-animation: thing 1s -0.9375s linear infinite alternate;
+  animation: thing 1s -0.9375s linear infinite alternate; }
+
+.thing:nth-child(16):after {
+  -webkit-animation: thing 1s -0.9375s linear infinite alternate-reverse;
+  animation: thing 1s -0.9375s linear infinite alternate-reverse; }
+
+@-webkit-keyframes thing {
+  0% {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  100% {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); } }
+@keyframes thing {
+  0% {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  100% {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); } }
 @media print {
   section#questions {
     display: none; }
